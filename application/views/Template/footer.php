@@ -1,1 +1,4 @@
-<footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Weriston Alves 2021</div></footer>
+
+<footer class="meu_footer nav-header-weriston">
+    <div style="color: white; padding-top:3%">Copyright &copy; Weriston Alves 2021</div>
+</footer>
