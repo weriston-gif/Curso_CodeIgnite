@@ -1,22 +1,23 @@
-<section class="about-section container-sm" id="login">
+<section class="about-section container-sm" >
     <div class="row">
-        <div  style="margin-left:25%;" class="col-lg-6 text-center">
-            <h2>LOGIN</h2>
-            <form id="form_login">
+        <div style="margin-left:25%;" class="col-lg-6 text-center">
+            <h2><strong>LOGIN</strong></h2>
+            <form id="login_form" method="POST | GET" action="<?=base_url() ?>index.php/restrict/ajax_login" >
                 <div class="form-group">
-                    <label for="">Usuário</label>
-                    <input type="text" class="form-control" id="username">
+                    <label for="">Usuário</label>  
+                    <input class="form-control" name="nome" placeholder="Seu nome" id="user">  
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Senha</label>
-                    <input type="password" class="form-control" id="password">
+                    <label for="">Senha</label>
+                    <input type="password"  class="form-control" name="Senha" id="pass" >
                 </div>
-                <br>
-                <div style="text-align: center;" class="form-group">
-                    <button style="margin-left: 38%;" id="btn-login" type="submit" class="btn_custon second_btn">Login</button>
+                <div> 
+                    <div style="text-align: center;" class="form-group">
+                        <button style="margin-left: 14.5vw;" id="btn_login" type="submit" class="btn_custon second_btn">Entrar</button>
+                    </div>
+                    <span class="help-block"></span>
                 </div>
-                <span class="help-block"></span>
-
+                
             </form>
         </div>
     </div>
