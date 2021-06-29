@@ -15,7 +15,7 @@ class Restrict extends CI_Controller
         //valida se já tem login
         if ($this->session->userdata("user_id")) {
             //se tiver vem para área
-            $this->template->show("restrict");
+            $this->template->show("_restrict.php");
         } else {
             $data = array(
                 "scripts" => array(
@@ -28,27 +28,22 @@ class Restrict extends CI_Controller
                     "css_login.css"
                 )
             );
-            //cria uma chave generica 
-            //echo password_hash('Alves@123', PASSWORD_DEFAULT);
             $this->template->show("login", $data, $estilo);
-            //    $this->load->model('logon_model');
-
-            //     print_r($this->logon_model->get_user_data("adminmaster"));
         }
     }
 
     public function logOff(){
         $this->session->sess_destroy();
-        header("Location: ".base_url(). "Restrict");
+        header("Location: ".base_url(). "restrict");
     }
 
     public function ajax_login()
 
     {
-       // validando segurança
-        if (!$this->input->is_ajax_request()) {
-            exit("Acesso bloqueado !");
-        } else {
+        //validando segurança
+        // if (!$this->input->is_ajax_request()) {
+        //     exit("Acesso bloqueado !");
+        // } else {
 
             $json = array();
             $json["status"] = 1;
@@ -84,10 +79,9 @@ class Restrict extends CI_Controller
                     $json["error_list"]["#btn_login"] = "Usuário ou senha inorreta ! ";
                 }
             }
-        }
+        // }
 
         // echo ('valor do input:'.$username);
-
         echo (json_encode($json));
     }
 }

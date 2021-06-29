@@ -2,16 +2,18 @@
     <div class="row">
         <div style="margin-left:25%;" class="col-lg-6 text-center">
             <h2><strong>LOGIN</strong></h2>
-            <form id="login_form" method="POST" >
+            <form id="login_form" method="POST" action="<?=base_url() ?>index.php/restrict/ajax_login" >
                 <div class="form-group">
                     <label for="">Usuário</label>  
-                    <input class="form-control" name="nome" placeholder="Seu nome" id="user"> 
                     <span class="help-block"></span> 
+                    <input class="form-control" name="nome" placeholder="Seu nome" id="user"> 
+                   
                 </div>
                 <div class="form-group">
                     <label for="">Senha</label>
-                    <input type="password"  class="form-control" name="senha" id="pass">
                     <span class="help-block"></span>
+                    <input type="password"  class="form-control" name="senha" id="pass">
+                    
                 </div>
                 <div> 
                     <div style="text-align: center;" class="form-group">
@@ -25,5 +27,3 @@
 </section>
 
 
-
-<!-- action="<?=base_url() ?>index.php/restrict/ajax_login" -->

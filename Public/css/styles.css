@@ -11161,7 +11161,11 @@ body {
   opacity: 0.3;
    color:white;
 }
-
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 .btn_custon{
   
   box-sizing: border-box;
